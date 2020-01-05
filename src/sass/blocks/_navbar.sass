@@ -1,6 +1,10 @@
 .navbar
-  padding-top: 15px
+  padding-top: 20px
   padding-bottom: 20px
+  display: block
+  &__logo
+    display: block
+    width: 100%
   &-time
     text-align: center
     font-family: 'Roboto'
@@ -23,6 +27,7 @@
       background-color: #a24eb2
       border-radius: 20px
       border-color: transparent
+      font-size: 16px
     &__facebook
       width: 40px
       height: 40px
@@ -30,6 +35,7 @@
       background-color: #6e8be8
       border-radius: 20px
       border-color: transparent
+      font-size: 16px
     &__instagram
       width: 40px
       height: 40px
@@ -37,31 +43,107 @@
       background-color: #279b9f
       border-radius: 20px
       border-color: transparent
+      font-size: 16px
   &-metro
     font-size: 13px
-    height: 45px
     display: flex
     justify-content: space-between
+    font-family: 'Roboto'
+    font-weight: 300
+    line-height: 24px
     &__block-1, &__block-2
       display: flex
       flex-direction: column
+      justify-content: center
       flex-wrap: wrap
-      height: 50px
+      height: 70px
     &__icon
       margin-right: 10px
     &__red
       color: #d42029
-      font-weight: 400
+      font-weight: 700
+      text-decoration: none
     &__blue
       color: #1b4291
-      font-weight: 400
+      font-weight: 700
+      text-decoration: none
   &-contact
     text-align: right
+    font-family: 'Roboto'
+    font-weight: 300
+    font-size: 13px
+    line-height: 25px
     &__questions
       font-size: 12px
       font-weight: 300
     &__number
       display: block
-      font-size: 19px
+      font-size: 18px
       color: #000000
       font-weight: 700
+      text-decoration: none
+      line-height: 25px
+    &__modal
+      font-size: 13px
+      color: #25c7db
+      font-family: 'Roboto'
+      font-weight: 700
+@media (max-width: 1199px)
+  .navbar-metro__block-1, .navbar-metro__block-2
+    width: 100%
+    flex-direction: row
+    justify-content: space-around
+    align-items: center
+    height: 50px
+@media (max-width: 991px)
+  .navbar-metro
+    margin-top: 10px
+    justify-content: space-between
+  .navbar-metro__block-1, .navbar-metro__block-2
+    width: 100%
+    flex-direction: row
+    justify-content: space-between
+    align-items: space-between
+  .navbar-socials
+    margin-top: 10px
+  .navbar-time
+    font-size: 10px
+    line-height: 20px
+    &__clock
+      font-size: 18px
+  .navbar-contact__questions
+    font-size: 10px
+  .navbar-contact__number
+    font-size: 15px
+    line-height: 20px
+  .navbar-metro
+    font-size: 11px
+    justify-content: space-between
+  .navbar-metro__block-1
+    flex-direction: column
+    align-items: flex-start
+  .navbar-metro__block-2
+    flex-direction: column
+    align-items: flex-start
+  .navbar-socials__vk, .navbar-socials__facebook, .navbar-socials__instagram
+    height: 35px
+    width: 35px
+    font-size: 13px
+  @media (min-width: 320px) and (max-width: 575px)
+    .navbar-time
+      margin-top: 10px
+    .navbar-contact
+      text-align: center
+      margin-top: 10px
+    .navbar-metro
+      display: block
+    .navbar-metro__block-1
+      align-items: center
+    .navbar-metro__block-2
+      align-items: center
+    .navbar-socials
+      margin-top: -10px
+    .navbar-socials__vk, .navbar-socials__facebook, .navbar-socials__instagram
+      height: 27px
+      width: 27px
+      font-size: 11px
