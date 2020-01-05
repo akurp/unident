@@ -1,0 +1,127 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+button {
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  outline: none;
+}
+
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.navbar-time {
+  text-align: center;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+.navbar-time__clock {
+  display: block;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 20.7px;
+  color: #7465ab;
+}
+
+.navbar-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.navbar-socials__vk {
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #a24eb2;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+.navbar-socials__facebook {
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #6e8be8;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+.navbar-socials__instagram {
+  width: 40px;
+  height: 40px;
+  color: white;
+  background-color: #279b9f;
+  border-radius: 20px;
+  border-color: transparent;
+}
+
+.navbar-metro {
+  font-size: 13px;
+  height: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar-metro__block-1, .navbar-metro__block-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 50px;
+}
+
+.navbar-metro__icon {
+  margin-right: 10px;
+}
+
+.navbar-metro__red {
+  color: #d42029;
+  font-weight: 400;
+}
+
+.navbar-metro__blue {
+  color: #1b4291;
+  font-weight: 400;
+}
+
+.navbar-contact {
+  text-align: right;
+}
+
+.navbar-contact__questions {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.navbar-contact__number {
+  display: block;
+  font-size: 19px;
+  color: #000000;
+  font-weight: 700;
+}
+/*# sourceMappingURL=style.css.map */
