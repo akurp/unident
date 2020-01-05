@@ -3,6 +3,10 @@
           box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 button {
   outline: none;
   cursor: pointer;
