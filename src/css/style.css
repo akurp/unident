@@ -22,6 +22,34 @@ button:active {
   cursor: pointer;
 }
 
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 360px;
+  height: 80px;
+  background: #7f70b1;
+  background: linear-gradient(135deg, #7f70b1 0%, #a24eb2 100%);
+  font-size: 22px;
+  font-family: 'Roboto Slab';
+  color: white;
+  border: none;
+  -webkit-box-shadow: 0px 2px 15px 0px rgba(162, 78, 178, 0.44);
+          box-shadow: 0px 2px 15px 0px rgba(162, 78, 178, 0.44);
+}
+
+.button-o {
+  margin-top: 25px;
+  width: 360px;
+  height: 80px;
+  border: 2px #7f70b1 solid;
+  background: transparent;
+  font-size: 22px;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  color: #7f70b1;
+}
+
 .navbar {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -274,5 +302,120 @@ button:active {
     width: 27px;
     font-size: 11px;
   }
+}
+
+.main {
+  padding-top: 40px;
+  padding-bottom: 39px;
+  background: #f5fdf9;
+  background: linear-gradient(45deg, #f5fdf9 0%, #cce8e9 70%, #e2f3f2 100%);
+  position: relative;
+}
+
+.main-woman {
+  content: '';
+  position: absolute;
+  -webkit-transform: translateX(-225px) translateY(63px);
+          transform: translateX(-225px) translateY(63px);
+}
+
+.main-text {
+  text-align: center;
+}
+
+.main-text__title {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 59px;
+  color: #279b9f;
+}
+
+.main-text__subtitle {
+  width: 360px;
+  height: 60px;
+  background-color: #279b9f;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  line-height: 59px;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.main-text__offer {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 18px;
+  color: #279b9f;
+}
+
+.main-text__offer_entered {
+  display: block;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+.main-text__slide {
+  max-width: 262px;
+}
+
+.main-text__slider {
+  margin-top: 65px;
+  margin-bottom: 75px !important;
+  max-width: 262px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-slide {
+  width: 262px !important;
+}
+
+.main-slide__picture {
+  max-width: 262px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-slide__img {
+  display: block !important;
+  margin-bottom: 40px;
+  margin-left: auto  !important;
+  margin-right: auto !important;
+}
+
+.main-slide__description {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.main-slide__price {
+  font-family: 'Roboto';
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.slick-dots li button:before {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  border: 1px solid #01b3e0;
+  opacity: 100;
+  content: '';
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 100;
+  background: #01b3e0;
 }
 /*# sourceMappingURL=style.css.map */

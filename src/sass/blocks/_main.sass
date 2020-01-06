@@ -1,0 +1,83 @@
+.main
+  padding-top: 40px
+  padding-bottom: 39px
+  background: rgb(245,253,249)
+  background: linear-gradient(45deg, rgba(245,253,249,1) 0%, rgba(204,232,233,1) 70%, rgba(226,243,242,1) 100%)
+  position: relative
+  &-woman
+    content: ''
+    position: absolute
+    transform: translateX(-225px) translateY(63px)
+  &-text
+    text-align: center
+    &__title
+      font-family: 'Roboto Slab'
+      font-weight: 700
+      font-size: 48px
+      line-height: 59px
+      color: #279b9f
+    &__subtitle
+      width: 360px
+      height: 60px
+      background-color: #279b9f
+      margin-left: auto
+      margin-right: auto
+      font-size: 30px
+      line-height: 59px
+      font-family: 'Roboto Slab'
+      font-weight: 700
+      color: white
+      margin-bottom: 40px
+    &__offer
+      font-family: 'Roboto Slab'
+      font-weight: 700
+      font-size: 18px
+      color: #279b9f
+      &_entered
+        display: block
+        max-width: 350px
+        margin-left: auto
+        margin-right: auto
+        margin-top: 20px
+    &__slide
+      max-width: 262px
+    &__slider
+      margin-top: 65px
+      margin-bottom: 75px !important
+      max-width: 262px
+      margin-left: auto
+      margin-right: auto
+  &-slide
+    width: 262px !important
+    &__picture
+      max-width: 262px
+      margin-left: auto
+      margin-right: auto
+    &__img
+      display: block !important
+      margin-bottom: 40px
+      margin-left: auto  !important
+      margin-right: auto !important
+    &__description
+      font-family: 'Roboto'
+      font-weight: 300
+      font-size: 20px
+      line-height: 30px
+    &__price
+      font-family: 'Roboto'
+      font-weight: 700
+      font-size: 20px
+      line-height: 30px
+
+.slick-dots li button:before
+  margin-top: 25px
+  margin-bottom: 25px
+  width: 10px
+  height: 10px
+  border-radius: 5px
+  border: 1px solid #01b3e0
+  opacity: 100
+  content: ''
+.slick-dots li.slick-active button:before
+  opacity: 100
+  background: #01b3e0
