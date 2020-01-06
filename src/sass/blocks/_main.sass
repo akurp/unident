@@ -1,13 +1,8 @@
 .main
   padding-top: 40px
   padding-bottom: 39px
-  background: rgb(245,253,249)
-  background: linear-gradient(45deg, rgba(245,253,249,1) 0%, rgba(204,232,233,1) 70%, rgba(226,243,242,1) 100%)
-  position: relative
-  &-woman
-    content: ''
-    position: absolute
-    transform: translateX(-225px) translateY(63px)
+  background: #e0f1f1 url('../img/main/main-background.png') center no-repeat
+  background-size: cover
   &-text
     text-align: center
     &__title
@@ -43,7 +38,7 @@
       max-width: 262px
     &__slider
       margin-top: 65px
-      margin-bottom: 75px !important
+      margin-bottom: 75px
       max-width: 262px
       margin-left: auto
       margin-right: auto
@@ -68,7 +63,8 @@
       font-weight: 700
       font-size: 20px
       line-height: 30px
-
+.slick-dotted.slick-slider
+  margin-bottom: 70px
 .slick-dots li button:before
   margin-top: 25px
   margin-bottom: 25px
@@ -81,3 +77,52 @@
 .slick-dots li.slick-active button:before
   opacity: 100
   background: #01b3e0
+
+@media (max-width: 1200px)
+  .main-text__title
+    font-size: 45px
+@media (max-width: 991px)
+  .main
+    background: #e0f1f1
+    padding-top: 20px
+    padding-bottom: 20px
+    &-text
+      &__title
+        line-height: 35px
+      &__subtitle
+        font-size: 25px
+        line-height: 50px
+        width: 320px
+        height: 50px
+        margin-bottom: 20px
+      &__offer
+        font-size: 16px
+        &_entered
+          margin-top: 10px
+      &__slider
+        margin-top: 26px
+        margin-bottom: 30px
+    &-slide
+      &__img
+        margin-bottom: 25px
+      &__description
+        font-size: 16px
+        line-height: 20px
+  .slick-dots
+    bottom: -13px
+  .slick-dotted.slick-slider
+    margin-bottom: 50px
+@media (max-width: 768px)
+  .main-text__title
+    font-size: 35px
+@media (max-width: 568px)
+  .main-text__title
+    line-height: 20px
+    font-size: 23px
+  .main-text__subtitle
+    font-size: 20px
+    line-height: 40px
+    height: 40px
+    width: 260px
+  .main-text__offer
+    font-size: 13px

@@ -50,6 +50,20 @@ button:active {
   color: #7f70b1;
 }
 
+@media (max-width: 991px) {
+  .button, .button-o {
+    width: 320px;
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 568px) {
+  .button, .button-o {
+    width: 280px;
+  }
+}
+
 .navbar {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -307,16 +321,8 @@ button:active {
 .main {
   padding-top: 40px;
   padding-bottom: 39px;
-  background: #f5fdf9;
-  background: linear-gradient(45deg, #f5fdf9 0%, #cce8e9 70%, #e2f3f2 100%);
-  position: relative;
-}
-
-.main-woman {
-  content: '';
-  position: absolute;
-  -webkit-transform: translateX(-225px) translateY(63px);
-          transform: translateX(-225px) translateY(63px);
+  background: #e0f1f1 url("../img/main/main-background.png") center no-repeat;
+  background-size: cover;
 }
 
 .main-text {
@@ -366,7 +372,7 @@ button:active {
 
 .main-text__slider {
   margin-top: 65px;
-  margin-bottom: 75px !important;
+  margin-bottom: 75px;
   max-width: 262px;
   margin-left: auto;
   margin-right: auto;
@@ -403,6 +409,10 @@ button:active {
   line-height: 30px;
 }
 
+.slick-dotted.slick-slider {
+  margin-bottom: 70px;
+}
+
 .slick-dots li button:before {
   margin-top: 25px;
   margin-bottom: 25px;
@@ -417,5 +427,74 @@ button:active {
 .slick-dots li.slick-active button:before {
   opacity: 100;
   background: #01b3e0;
+}
+
+@media (max-width: 1200px) {
+  .main-text__title {
+    font-size: 45px;
+  }
+}
+
+@media (max-width: 991px) {
+  .main {
+    background: #e0f1f1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .main-text__title {
+    line-height: 35px;
+  }
+  .main-text__subtitle {
+    font-size: 25px;
+    line-height: 50px;
+    width: 320px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  .main-text__offer {
+    font-size: 16px;
+  }
+  .main-text__offer_entered {
+    margin-top: 10px;
+  }
+  .main-text__slider {
+    margin-top: 26px;
+    margin-bottom: 30px;
+  }
+  .main-slide__img {
+    margin-bottom: 25px;
+  }
+  .main-slide__description {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .slick-dots {
+    bottom: -13px;
+  }
+  .slick-dotted.slick-slider {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-text__title {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 568px) {
+  .main-text__title {
+    line-height: 20px;
+    font-size: 23px;
+  }
+  .main-text__subtitle {
+    font-size: 20px;
+    line-height: 40px;
+    height: 40px;
+    width: 260px;
+  }
+  .main-text__offer {
+    font-size: 13px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
