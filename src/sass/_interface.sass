@@ -1,4 +1,5 @@
 $main-color: #279b9f
+$form-bg: #e2f2f2
 *
   box-sizing: border-box
 body, h1, h2, h3, h4, h5, h6
@@ -12,6 +13,10 @@ button:focus
 button:active
   outline: none
   cursor: pointer
+input
+  outline: none
+  &:focus
+    border: 1px solid $main-color
 .button
   display: block
   margin-left: auto
@@ -35,11 +40,25 @@ button:active
   font-family: 'Roboto Slab'
   font-weight: 700
   color: #7f70b1
+.input 
+  width: 370px
+  height: 75px
+  border: 1px solid #a3c9d3
+  text-align: center
+  font-size: 16px
+@media (max-width: 1200px)
+  .input
+    width: 310px
 @media (max-width: 991px)
   .button, .button-o
     width: 320px
     height: 50px
     font-size: 18px
+  .input
+    height: 50px
 @media (max-width: 568px)
   .button, .button-o
     width: 280px
+    font-size: 15px
+  .input
+    font-size: 13px

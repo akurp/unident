@@ -1,0 +1,126 @@
+.form1
+  position: relative
+  background-color: $form-bg
+  height: 460px
+  &-img
+    position: absolute
+    left: -392px
+    &__picture
+      height: 460px
+  &-text
+    padding-top: 80px
+    position: relative
+    &::after
+      position: absolute
+      content: ''
+      background: url('../img/form-1/curve-arrow.png') center no-repeat
+      width: 122px
+      height: 58px
+      right: -8px
+    &__title
+      font-size: 32px
+      font-family: 'Roboto Slab'
+      font-weight: 700
+      color: $main-color
+      margin-bottom: 60px
+    &__phone
+      display: flex
+    &__offer
+      display: block
+      font-family: 'Roboto'
+      font-size: 18px
+      margin-top: 60px
+    &-phone
+      &__icon
+        width: 70px
+        height: 70px
+        font-size: 28px
+        color: $main-color
+        display: flex
+        align-items: center
+        justify-content: center
+        border: 3px $main-color solid
+        border-radius: 45px
+        margin-right: 29px
+      &__text
+        display: block
+        font-family: 'Roboto'
+        font-size: 18px
+        margin-bottom: 20px
+      &__number
+        font-family: 'Roboto'
+        font-weight: 700
+        font-size: 28px
+        color: #000000
+        text-decoration: none
+  &-data
+    padding-top: 90px
+    padding-bottom: 90px
+    &__input
+      &:first-child
+        margin-bottom: 20px
+      &:nth-child(2)
+        margin-bottom: 30px
+    &__button
+      width: 370px
+@media (max-width: 1200px)
+  .form1-text::after
+    background: none
+  .form1-data__button
+    width: 310px
+  .form1-text-phone__icon
+    height: 65px
+@media (max-width: 991px)
+  .form1
+    height: 325px
+  .form1-img
+    display: none
+  .form1-text
+    padding-top: 40px
+  .form1-text__title
+    font-size: 23px
+    margin-bottom: 35px
+  .form1-text-phone__text
+    font-size: 15px
+  .form1-text-phone__number
+    font-size: 21px
+  .form1-text-phone__icon
+    height: 55px
+    font-size: 24px
+  .form1-text__offer
+    margin-top: 20px
+    font-size: 15px
+  .form1-data
+    padding-top: 55px
+    padding-bottom: 70px
+  .form1-data__input
+    margin-left: 10px
+@media (max-width: 768px)
+  .form1
+    height: 100%
+  .form1-text__title
+    text-align: center
+  .form1-text-phone__text
+    font-size: 11px
+  .form1-text-phone__number
+    font-size: 18px
+  .form1-text__offer
+    font-size: 11px
+    text-align: center
+  .form1-text-phone__icon
+    width: 50px
+    height: 50px
+    font-size: 21px
+  .form1-text__phone
+    justify-content: center
+  .form1-data
+    padding-top: 30px
+    padding-bottom: 45px
+    text-align: center
+  .form1-data__input
+    margin-left: 0
+@media (max-width: 576px)
+  .form1-data__input
+    width: 280px
+  .form1-data__button
+    width: 280px
