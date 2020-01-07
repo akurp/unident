@@ -10,11 +10,12 @@
       font-weight: 700
       font-size: 48px
       line-height: 59px
-      color: #279b9f
+      color: $main-color
+      margin-bottom: 40px
     &__subtitle
       width: 360px
       height: 60px
-      background-color: #279b9f
+      background-color: $main-color
       margin-left: auto
       margin-right: auto
       font-size: 30px
@@ -27,7 +28,7 @@
       font-family: 'Roboto Slab'
       font-weight: 700
       font-size: 18px
-      color: #279b9f
+      color: $main-color
       &_entered
         display: block
         max-width: 350px
@@ -84,8 +85,8 @@
 @media (max-width: 991px)
   .main
     background: #e0f1f1
-    padding-top: 20px
-    padding-bottom: 20px
+    padding-top: 30px
+    padding-bottom: 30px
     &-text
       &__title
         line-height: 35px
@@ -115,10 +116,12 @@
 @media (max-width: 768px)
   .main-text__title
     font-size: 35px
+    margin-bottom: 30px
 @media (max-width: 568px)
   .main-text__title
     line-height: 20px
     font-size: 23px
+    margin-bottom: 20px
   .main-text__subtitle
     font-size: 20px
     line-height: 40px
