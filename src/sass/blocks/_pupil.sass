@@ -1,0 +1,83 @@
+.pupil
+  background: url('../img/pupil/pupil-bg.png') center no-repeat
+  height: 640px
+  &__title
+    padding-top: 105px
+    font-size: 32px
+    font-weight: 700
+    font-family: 'Roboto Slab'
+    color: $main-color
+    margin-bottom: 85px
+  &-block
+    display: flex
+    align-items: center
+    font-family: 'Roboto'
+    font-size: 18px
+    line-height: 26px
+    width: 650px
+    &:first-child
+      margin-bottom: 50px
+    &:nth-child(2)
+      margin-bottom: 70px
+  &-item
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 70px
+    height: 70px
+    border: 3px solid $main-color
+    border-radius: 45px
+    margin-right: 32px
+@media (max-width: 1200px)
+  .pupil__title
+    padding-top: 65px
+    margin-bottom: 65px
+  .pupil-block
+    width: 550px
+@media (max-width: 991px)
+  .pupil
+    background: white
+    height: 600px
+  .pupil__title
+    font-size: 23px
+    max-width: 485px
+    text-align: center
+    display: block
+    margin-left: auto
+    margin-right: auto
+  .pupil-block
+    font-size: 15px
+    margin-left: auto
+    margin-right: auto
+  .pupil-item
+    width: 60px
+    height: 60px
+    &__picture
+      width: 55%
+@media (max-width: 768px)
+  .pupil
+    height: 450px
+  .pupil__title
+    padding-top: 35px
+    margin-bottom: 45px
+  .pupil-item
+    width: 50px
+    height: 50px
+    margin-right: 25px
+  .pupil-block
+    font-size: 11px
+    line-height: 15px
+    width: 410px
+    &:first-child
+      margin-bottom: 45px
+    &:nth-child(2)
+      margin-bottom: 50px
+@media (max-width: 576px)
+  .pupil
+    height: 485px
+  .pupil-block
+    width: 290px
+    &:first-child
+      margin-bottom: 30px
+    &:nth-child(2)
+      margin-bottom: 45px
