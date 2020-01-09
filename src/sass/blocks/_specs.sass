@@ -39,23 +39,31 @@
   opacity: 100
   width: 25px
   height: 45px
-.slick-prev
+.specs-slide__arrow_prev
   background: url('../img/specs/arrow-left.png')
   background-size: cover
-  top: 95px
+  position: absolute
+  top: 230px
   left: -35px
+  cursor: pointer
   &:focus, &:hover
     background: url('../img/specs/arrow-left.png')
     background-size: cover
-.slick-next
+.specs-slide__arrow_next
+  position: absolute
   background: url('../img/specs/arrow-right.png')
   background-size: cover
   right: -35px
-  top: 95px
+  top: 230px
+  cursor: pointer
   &:focus, &:hover
     background: url('../img/specs/arrow-right.png')
     background-size: cover
-
+@media (max-width: 1200px)
+  .specs-slide__arrow_prev
+    left: -15px
+  .specs-slide__arrow_next
+    right: -15px
 @media (max-width: 991px)
   .specs
     padding-top: 30px
@@ -71,14 +79,16 @@
     font-size: 15px
   .specs-slide__rang
     font-size: 11px
-  .slick-prev
+  .specs-slide__arrow_prev
+    top: 160px
     left: -20px
-  .slick-next
+  .specs-slide__arrow_next
+    top: 160px
     right: -15px
 @media (max-width: 576px)
   .specs__title
     font-size: 20px
-  .slick-prev
-    left: 0
-  .slick-next
-    right: 0
+  .specs-slide__arrow_prev
+    left: 25px
+  .specs-slide__arrow_next
+    right: 25px

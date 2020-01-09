@@ -1,0 +1,91 @@
+.reason
+  padding-top: 100px
+  &__title
+    font-family: 'Roboto Slab'
+    font-weight: 700
+    font-size: 36px
+    margin-bottom: 80px
+    text-align: center
+    color: $main-color
+  &-block
+    text-align: center
+    &__text
+      font-size: 18px
+      font-family: 'Roboto'
+      margin-bottom: 85px
+    &__slider
+      width: 360px
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 40px
+    &__arrow
+      position: absolute
+      width: 22px
+      height: 41px
+  &-img
+    left: -390px
+    top: -60px
+    position: absolute
+  &-slide
+    &__img
+      width: 270px
+      margin-left: auto
+      margin-right: auto
+  &-arrow
+    &_prev
+      background: url('../img/specs/arrow-left.png') center no-repeat
+      cursor: pointer
+      left: 80px
+      top: 110px
+    &_next
+      background: url('../img/specs/arrow-right.png') center no-repeat
+      cursor: pointer
+      right: 95px
+      top: 110px
+.reason-slide-img__picture
+  width: 100%
+@media (max-width: 1730px)
+  .reason-img
+    display: none
+  .reason
+    padding-bottom: 100px
+@media (max-width: 991px)
+  .reason
+    padding-top: 75px
+    padding-bottom: 85px
+  .reason__title
+    font-size: 25px
+    margin-bottom: 60px
+  .reason-block__text
+    font-size: 15px
+    line-height: 26px
+  .reason-slide__img
+    width: 220px
+  .reason-arrow_prev, .reason-arrow_next
+    top: 85px
+@media (max-width: 768px)
+  .reason-block__slider
+    width: 180px
+  .reason-slide__img
+    width: 180px
+  .reason-arrow_prev, .reason-arrow_next
+    top: 70px
+@media (max-width: 576px)
+  .reason
+    padding-top: 50px
+    padding-bottom: 60px
+  .reason__title
+    font-size: 18px
+  .reason-arrow_next
+    right: 80px
+  .reason-arrow_prev
+    left: 80px
+  .reason-block__text
+    font-size: 11px
+    line-height: 18px
+    margin-bottom: 40px
+@media (max-width: 430px)
+  .reason-arrow_next
+    right: 5px
+  .reason-arrow_prev
+    left: 5px
