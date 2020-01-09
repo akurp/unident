@@ -1,0 +1,102 @@
+.cappa
+  background: #eff8f8 url('../img/cappa/cappa-bg.png')
+  background-size: cover
+  padding-top: 100px
+  padding-bottom: 90px
+  &__title
+    font-size: 36px
+    line-height: 59px
+    font-family: 'Roboto Slab'
+    font-weight: 700
+    color: $main-color
+    margin-bottom: 65px
+    max-width: 750px
+  &-list
+    position: relative
+    list-style: none
+    display: flex
+    justify-content: center
+    flex-direction: column
+  &__item
+    margin-left: 55px
+    margin-bottom: 65px
+    &:last-child
+      margin-bottom: 0
+      max-width: 515px
+    &_first
+      max-width: 465px
+    &_second
+      max-width: 420px
+    &_third, &_forth
+      margin-bottom: 80px
+    &:nth-child(5)
+      max-width: 555px
+    &_num
+      position: absolute
+      left: 0
+      width: 70px
+      height: 70px
+      border-radius: 45px
+      border: 2px solid $main-color
+      text-align: center
+      line-height: 65px
+      font-family: 'Roboto Slab'
+      font-weight: 700
+      color: $main-color
+    &_text
+      display: block
+      margin-top: 8px
+      font-size: 18px
+      font-family: 'Roboto'
+      line-height: 1.4
+      &-third, &-forth
+        display: block
+        margin-top: 25px
+        font-family: 'Roboto'
+        font-size: 18px
+@media (max-width: 991px)
+  .cappa
+    padding-top: 70px
+    padding-bottom: 60px
+  .cappa__title
+    font-size: 25px
+    line-height: 40px
+    margin-bottom: 35px
+  .cappa__item_num
+    width: 60px
+    height: 60px
+    line-height: 55px
+  .cappa__item_text
+    margin-top: 0
+    font-size: 15px
+    line-height: 26px
+  .cappa__item_text-third, .cappa__item_text-forth
+    margin-top: 18px
+    font-size: 15px
+    line-height: 26px
+@media (max-width: 768px)
+  .cappa__item_num
+    width: 50px
+    height: 50px
+    line-height: 45px
+@media (max-width: 576px)
+  .cappa__title
+    text-align: center
+    font-size: 18px
+    line-height: 1.4
+  .cappa__item
+    margin-left: 35px
+    margin-bottom: 40px
+  .cappa__item_third
+    margin-bottom: 40px
+  .cappa__item_forth
+    margin-bottom: 40px
+  .cappa__item_fifth
+    margin-bottom: 20px
+  .cappa__item_text-third
+    margin-top: 5px
+  .cappa__item_text-forth
+    martin-top: 10px
+  .cappa__item_text, .cappa__item_text-third, .cappa__item_text-forth
+    font-size: 11px
+    line-height: 18px

@@ -1200,6 +1200,7 @@ input:focus {
 
 .reason {
   padding-top: 100px;
+  padding-bottom: 93px;
 }
 
 .reason__title {
@@ -1268,9 +1269,6 @@ input:focus {
   .reason-img {
     display: none;
   }
-  .reason {
-    padding-bottom: 100px;
-  }
 }
 
 @media (max-width: 991px) {
@@ -1333,6 +1331,159 @@ input:focus {
   }
   .reason-arrow_prev {
     left: 5px;
+  }
+}
+
+.cappa {
+  background: #eff8f8 url("../img/cappa/cappa-bg.png");
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 90px;
+}
+
+.cappa__title {
+  font-size: 36px;
+  line-height: 59px;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  color: #279b9f;
+  margin-bottom: 65px;
+  max-width: 750px;
+}
+
+.cappa-list {
+  position: relative;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.cappa__item {
+  margin-left: 55px;
+  margin-bottom: 65px;
+}
+
+.cappa__item:last-child {
+  margin-bottom: 0;
+  max-width: 515px;
+}
+
+.cappa__item_first {
+  max-width: 465px;
+}
+
+.cappa__item_second {
+  max-width: 420px;
+}
+
+.cappa__item_third, .cappa__item_forth {
+  margin-bottom: 80px;
+}
+
+.cappa__item:nth-child(5) {
+  max-width: 555px;
+}
+
+.cappa__item_num {
+  position: absolute;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  border-radius: 45px;
+  border: 2px solid #279b9f;
+  text-align: center;
+  line-height: 65px;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  color: #279b9f;
+}
+
+.cappa__item_text {
+  display: block;
+  margin-top: 8px;
+  font-size: 18px;
+  font-family: 'Roboto';
+  line-height: 1.4;
+}
+
+.cappa__item_text-third, .cappa__item_text-forth {
+  display: block;
+  margin-top: 25px;
+  font-family: 'Roboto';
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .cappa {
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+  .cappa__title {
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 35px;
+  }
+  .cappa__item_num {
+    width: 60px;
+    height: 60px;
+    line-height: 55px;
+  }
+  .cappa__item_text {
+    margin-top: 0;
+    font-size: 15px;
+    line-height: 26px;
+  }
+  .cappa__item_text-third, .cappa__item_text-forth {
+    margin-top: 18px;
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cappa__item_num {
+    width: 50px;
+    height: 50px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 576px) {
+  .cappa__title {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .cappa__item {
+    margin-left: 35px;
+    margin-bottom: 40px;
+  }
+  .cappa__item_third {
+    margin-bottom: 40px;
+  }
+  .cappa__item_forth {
+    margin-bottom: 40px;
+  }
+  .cappa__item_fifth {
+    margin-bottom: 20px;
+  }
+  .cappa__item_text-third {
+    margin-top: 5px;
+  }
+  .cappa__item_text-forth {
+    martin-top: 10px;
+  }
+  .cappa__item_text, .cappa__item_text-third, .cappa__item_text-forth {
+    font-size: 11px;
+    line-height: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */
