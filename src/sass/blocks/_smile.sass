@@ -1,0 +1,96 @@
+.smile
+  padding-top: 95px
+  padding-bottom: 105px
+  position: relative
+  &__title
+    font-family: 'Roboto Slab'
+    font-weight: 700
+    font-size: 36px
+    margin-bottom: 75px
+    text-align: center
+    color: $main-color
+  &-slider
+    text-align: center
+    width: 520px
+    margin-left: auto
+    margin-right: auto
+  &-slide__img
+    display: block
+    margin-left: auto
+    margin-right: auto
+    width: 270px
+    border-radius: 135px
+    margin-bottom: 40px
+  &-slide__text
+    max-width: 360px
+    display: block
+    margin-left: auto
+    margin-right: auto
+    font-family: 'Roboto'
+    font-weight: 400
+    font-size: 20px
+    line-height: 30px
+  &-arrow
+    &s
+      position: relative
+    &_prev
+      background: url('../img/specs/arrow-left.png') center no-repeat
+      cursor: pointer
+      left: 270px
+      top: 110px
+      position: absolute
+    &_next
+      background: url('../img/specs/arrow-right.png') center no-repeat
+      cursor: pointer
+      right: 270px
+      top: 110px
+      position: absolute
+.smile-slide-img__picture
+  width: 100%
+@media (max-width: 1200px)
+  .smile-arrow_prev
+    left: 180px
+  .smile-arrow_next
+    right: 180px
+@media (max-width: 991px)
+  .smile
+    padding-top: 75px
+    padding-bottom: 50px
+    &-slider
+      width: 480px
+    &__title
+      font-size: 25px
+      margin-bottom: 60px
+    &-slide__img
+      width: 220px
+    &-arrow
+      &_prev
+        top: 90px
+        left: 80px
+      &_next
+        top: 90px
+        right: 80px
+    &-slide__text
+      font-size: 15px
+      line-height: 26px
+      max-width: 285px
+@media (max-width: 768px)
+  .smile-slide__img
+    width: 180px
+  .smile-slide__text
+    font-size: 11px
+    line-height: 18px
+    max-width: 210px
+  .smile-slider
+    width: 290px
+@media (max-width: 576px)
+  .smile__title
+    font-size: 18px
+  .smile-arrow_prev
+    left: 5px
+    top: 75px
+  .smile-arrow_next
+    right: 5px
+    top: 75px
+  .smile-slider
+    width: 200px

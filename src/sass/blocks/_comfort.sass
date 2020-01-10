@@ -1,0 +1,69 @@
+.comfort
+  padding-top: 105px
+  padding-bottom: 60px
+  &__title
+    font-size: 36px
+    font-family: 'Roboto Slab'
+    font-weight: 700
+    text-align: center
+    margin-bottom: 85px
+    color: $main-color
+  &-wrap
+    display: flex
+    justify-content: space-between
+  &-block
+    &__item
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 25px
+      width: 68px
+      height: 68px
+      border: 2px solid $main-color
+      font-size: 24px
+      line-height: 65px
+      text-align: center
+      font-family: 'Roboto'
+      color: $main-color
+      border-radius: 34px
+    &__text
+      text-align: center
+      font-family: 'Roboto'
+      font-size: 15px
+      line-height: 20px
+      &_one
+        width: 174px
+      &_two
+        width: 163px
+      &_three
+        width: 186px
+      &_four
+        width: 179px
+      &_five
+        width: 157px
+@media (max-width: 991px)
+  .comfort
+    padding-top: 60px
+  .comfort__title
+    font-size: 25px
+    margin-bottom: 70px
+  .comfort-wrap
+    flex-wrap: wrap
+    justify-content: space-around
+  .comfort-block__item
+    width: 60px
+    height: 60px
+    font-size: 18px
+    line-height: 60px
+    margin-bottom: 15px
+  .comfort-block
+    margin-bottom: 30px
+@media (max-width: 576px)
+  .comfort
+    padding-bottom: 25px
+  .comfort__title
+    margin-bottom: 55px
+    font-size: 18px
+  .comfort-block__text
+    font-size: 11px
+    line-height: 18px
+    width: 180px

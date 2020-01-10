@@ -12,6 +12,13 @@ $(document).ready(function(){
     prevArrow: $('.reason-arrow_prev'),
     nextArrow: $('.reason-arrow_next')
   });
+  $('.smile-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    prevArrow: $('.smile-arrow_prev'),
+    nextArrow: $('.smile-arrow_next')
+  })
   $('.specs-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
