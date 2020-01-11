@@ -35,6 +35,9 @@ $(document).ready(function(){
     appendDots: $('.clients-slider-nav__item'),
     focusOnSelect: true
   })
+  $('.dentist-slider').slick({
+    slidesToShow: 6
+  })
   $('.specs-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
