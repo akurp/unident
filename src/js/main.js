@@ -18,6 +18,22 @@ $(document).ready(function(){
     arrows: true,
     prevArrow: $('.smile-arrow_prev'),
     nextArrow: $('.smile-arrow_next')
+  });
+  $('.clients-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    nextArrow: $('.clients-arrow_next'),
+    prevArrow: $('.clients-arrow_prev'),
+    dots: false,
+    asNavFor: '.clients-slider-nav'
+
+  });
+  $('.clients-slider-nav').slick({
+    slidesToShow: 5,
+    asNavFor: '.clients-slider',
+    appendDots: $('.clients-slider-nav__item'),
+    focusOnSelect: true
   })
   $('.specs-slider').slick({
     slidesToShow: 4,
