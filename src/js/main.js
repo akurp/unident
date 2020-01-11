@@ -38,6 +38,9 @@ $(document).ready(function(){
   $('.dentist-slider').slick({
     slidesToShow: 6
   })
+  $('.reviews-block-description-audio__start').on('click', function(){
+    $('fa-play').toggleClass('fa-pause');
+  });
   $('.specs-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
