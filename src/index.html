@@ -759,10 +759,19 @@
             <div class="reviews-block-description__text">
               Эта стоматология очень хорошая, консультация бесплатная, хорошо консультируют, также врачи очень хорошие и добрые, делают всё быстро и качественно сразу видно, что работают профессионалы, также лечат совсем не больно и обращаются с вами очень хорошо.
             </div>
-            <div class="reviews-block-description-audio">
-              <a class="reviews-block-description-audio__start" onclick="document.getElementById('player').play()"><i class="fa fa-play"></i>Прослушать отзыв</a>
-              <a class="reviews-block-description-audio__mute" onclick="document.getElementById('player').mute()"> <i class="fa fa-volume-up"></i></a>
-              <audio src="media/Ludwig Göransson – The Mandalorian.mp3" id="player" class="reviews-block-description-audio__file"></audio>
+            <div class="review-block-description-audio">
+              <audio class="review-block-description-audio__track" id="myTrack">
+                <source src="media/Dave Rodgers – Deja Vu.mp3" type="audio/mp3" />
+              </audio>
+              <div class="review-block-description-audio__buttons" id="buttons">
+                <button type="button" class="review-block-description-audio-buttons__playButton" id="playButton"><i class="fa fa-play"></i></button>
+                <button type="button" class="review-block-description-audio-buttons__muteButton" id="muteButton"><i class="fa fa-volume-up"></i></button>
+                <span id="currentTime">0:00</span>
+                <span id="fullDuration">0:00</span>
+              </div>
+              <div class="review-block-description-audio__defaultBar" id="defaultBar">
+                <div class="review-block-description-audio__progressBar" id="progressBar"></div>
+              </div>
             </div>
           </div>
           <!-- /.reviews-block-description -->

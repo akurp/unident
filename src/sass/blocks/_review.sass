@@ -32,3 +32,49 @@
         font-size: 18px
         line-height: 30px
         margin-bottom: 60px
+
+.review-block-description-audio
+  max-width: 520px
+  &__defaultBar
+    max-width: 520px
+    position: relative
+    background: #e0eff7
+    height: 5px
+  &__progressBar
+    position: absolute
+    height: 5px
+    background: $main-color
+    width: 0px
+  &__buttons
+    display: flex
+    justify-content: space-between
+    width: 100%
+    margin-bottom: 20px
+  &-buttons
+    &__playButton
+      position: relative
+      color: $main-color
+      font-size: 20px
+      font-family: 'Roboto'
+      font-weight: 400
+      padding: 0
+      border: none
+      &:after
+        position: absolute
+        content: "Прослушать отзыв"
+        top: 5px
+        left: 40px
+        font-size: 16px
+        width: 145px
+    &__muteButton
+      color: $main-color
+      font-size: 20px
+      font-weight: 400
+      border: none
+      padding: 0
+#currentTime
+  color: $main-color
+  display: none
+#fullDuration
+  color: $main-color
+  display: none
