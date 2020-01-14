@@ -1,0 +1,84 @@
+.form4
+  padding-top: 80px
+  padding-bottom: 85px
+  background: #eef7f7 url('../img/form-4/form-4_bg.png') right no-repeat
+  background-size: contain
+  &-data
+    margin-left: auto
+    margin-right: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__title
+    text-align: center
+    font-size: 32px
+    font-family: 'Roboto Slab'
+    font-weight: 700
+    line-height: 45px
+    color: $main-color
+    margin-bottom: 70px
+  &__note
+    margin-bottom: 25px
+    font-family: 'Roboto'
+    font-weight: 400
+    font-size: 18px
+  &-form__input
+    margin-bottom: 20px
+    &_second
+      margin-bottom: 30px
+  &-form__button
+    width: 370px
+    margin-bottom: 65px
+  &-tel__link
+    display: flex
+    align-items: center
+    justify-content: center
+  &-tel__note
+    font-family: 'Roboto'
+    font-size: 18px
+    margin-bottom: 20px
+  &-tel__num
+    display: block
+    font-family: 'Roboto'
+    font-weight: 700
+    text-decoration: none
+    margin-left: 15px
+    font-size: 24px
+    color: #000000
+@media (max-width: 991px)
+  .form4
+    padding-top: 60px
+    padding-bottom: 50px
+    background: #eef7f7
+    &__title
+      font-size: 25px
+      line-height: 36px
+      margin-bottom: 35px
+    &-form__button
+      width: 310px
+      margin-bottom: 50px
+  .form4__note
+    font-size: 16px
+  .form4-tel__note
+    font-size: 16px
+    margin-bottom: 10px
+  .form4-tel__icon
+    width: 25px
+  .form4-tel__num
+    font-size: 20px
+@media (max-width: 576px)
+  .form4__title
+    font-size: 18px
+    line-height: 25px
+  .form4-form__button, .form4-form__input
+    width: 290px
+  .form4-form__button
+    margin-bottom: 30px
+  .form4__note
+    font-size: 11px
+  .form4-tel__note
+    font-size: 11px
+  .form4-tel__icon
+    width: 18px
+  .form4-tel__num
+    font-size: 18px

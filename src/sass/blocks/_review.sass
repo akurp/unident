@@ -1,37 +1,73 @@
 .reviews
-  padding-top: 100px
+  padding-top: 95px
   padding-bottom: 90px
   background: url('../img/reviews/review-bg.png') center no-repeat
   background-size: cover
+  &__title
+    font-family: 'Roboto Slab'
+    font-weight: 700
+    font-size: 32px
+    color: $main-color
+    text-align: center
+    margin-bottom: 70px
   &-block
     background-color: white
     max-width: 975px
     margin-left: auto
     margin-right: auto
-    display: flex
+    display: flex 
     padding: 85px 90px 80px 80px
-    flex-wrap: wrap
+    flex-wrap: wrap 
+    vertical-align: top
+    &s
+      max-width: 975px
+      margin-left: auto
+      margin-right: auto
+      position: relative
     &-name
-      display: flex
+      text-align: center
+      display: inline-block
       flex-direction: column
-      justify-content: center
-      align-items: center
       margin-right: 90px
       font-family: 'Roboto'
       font-size: 16px
       &__photo
         margin-bottom: 30px
+      &-photo__picture
+        width: 100%
     &-description
-      display: flex
+      position: absolute
+      display: inline-block
       flex-direction: column
       justify-content: center      
       max-width: 520px
+      top: 75px
       &__text
         font-family: 'Roboto'
         font-weight: 400
         font-size: 18px
-        line-height: 30px
+        line-height: 28px
         margin-bottom: 60px
+        max-width: 515px
+  &-arrows
+    position: relative
+  &-arrow_prev
+    background: url('../img/specs/arrow-left.png') center no-repeat
+    position: absolute
+    width: 22px
+    height: 41px
+    cursor: pointer
+    left: -15px
+    top: 180px
+  &-arrow_next
+    background: url('../img/specs/arrow-right.png') center no-repeat
+    position: absolute
+    width: 22px
+    height: 41px
+    cursor: pointer
+    right: -15px
+    top: 180px
+
 
 .review-block-description-audio
   max-width: 520px
@@ -59,6 +95,7 @@
       font-weight: 400
       padding: 0
       border: none
+      background: none
       &:after
         position: absolute
         content: "Прослушать отзыв"
@@ -67,6 +104,7 @@
         font-size: 16px
         width: 145px
     &__muteButton
+      background: none
       color: $main-color
       font-size: 20px
       font-weight: 400
@@ -78,3 +116,89 @@
 #fullDuration
   color: $main-color
   display: none
+@media (max-width: 1200px)
+  .reviews
+    &-block
+      max-width: 900px
+      padding: 65px 75px 60px 60px
+      &-name
+        margin-right: 45px
+      &s
+        width: 900px
+      &-description
+        top: 55px
+    &-arrow_prev
+      left: -30px
+    &-arrow_next
+      right: -30px
+@media (max-width: 991px)
+  .reviews
+    padding-top: 75px
+    padding-bottom: 65px
+  .reviews__title
+    font-size: 25px
+    margin-bottom: 50px
+  .reviews-block
+    max-width: 690px
+    padding: 60px 60px 45px 40px
+    &s
+      max-width: 690px
+  .reviews-block-name
+    width: 150px
+  .reviews-block-description__text
+    font-size: 15px
+    line-height: 26px
+    max-width: 400px
+    margin-bottom: 20px
+  .reviews-block-name__fi
+    font-size: 15px
+  .reviews-arrow_prev
+    top: 140px
+  .reviews-arrow_next
+    top: 140px
+@media (max-width: 768px)
+  .reviews-block, .reviews-blocks
+    width: 510px
+  .reviews-block-name
+    width: 100px
+  .reviews-block-description__text, .reviews-block-name__fi, .review-block-description-audio-buttons__playButton:after
+    font-size: 11px
+    line-height: 18px
+  .reviews-block-description__text
+    max-width: 285px
+    margin-bottom: 10px
+  .review-block-description-audio__buttons
+    margin-bottom: 10px
+  .review-block-description-audio-buttons__playButton
+    font-size: 15px
+    &:after
+     width: 100px
+     left: 30px
+     top: 0 
+  .review-block-description-audio-buttons__muteButton
+    font-size: 15px
+  .reviews-arrow_prev, .reviews-arrow_next
+    top: 110px
+@media (max-width: 576px)
+  .reviews-block 
+    width: 250px
+    padding: 35px 15px 25px 15px
+    &s
+      width: 250px
+  .reviews-block-name
+    display: block
+    margin-left: auto
+    margin-right: auto
+  .reviews-block-name__photo
+    margin-bottom: 20px
+  .reviews-block-description
+    position: relative
+    top: 10px
+  .review-block-description-audio
+    margin-bottom: 15px
+  .reviews-arrow_prev
+    top: 145px
+    left: -7px
+  .reviews-arrow_next
+    top: 145px
+    right: -7px

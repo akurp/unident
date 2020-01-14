@@ -5305,10 +5305,19 @@ input:focus {
 }
 
 .reviews {
-  padding-top: 100px;
+  padding-top: 95px;
   padding-bottom: 90px;
   background: url("../img/reviews/review-bg.png") center no-repeat;
   background-size: cover;
+}
+
+.reviews__title {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 32px;
+  color: #279b9f;
+  text-align: center;
+  margin-bottom: 70px;
 }
 
 .reviews-block {
@@ -5322,22 +5331,23 @@ input:focus {
   padding: 85px 90px 80px 80px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  vertical-align: top;
+}
+
+.reviews-blocks {
+  max-width: 975px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
 }
 
 .reviews-block-name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  text-align: center;
+  display: inline-block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-right: 90px;
   font-family: 'Roboto';
   font-size: 16px;
@@ -5347,10 +5357,13 @@ input:focus {
   margin-bottom: 30px;
 }
 
+.reviews-block-name-photo__picture {
+  width: 100%;
+}
+
 .reviews-block-description {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: absolute;
+  display: inline-block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -5359,14 +5372,40 @@ input:focus {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 520px;
+  top: 75px;
 }
 
 .reviews-block-description__text {
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 18px;
-  line-height: 30px;
+  line-height: 28px;
   margin-bottom: 60px;
+  max-width: 515px;
+}
+
+.reviews-arrows {
+  position: relative;
+}
+
+.reviews-arrow_prev {
+  background: url("../img/specs/arrow-left.png") center no-repeat;
+  position: absolute;
+  width: 22px;
+  height: 41px;
+  cursor: pointer;
+  left: -15px;
+  top: 180px;
+}
+
+.reviews-arrow_next {
+  background: url("../img/specs/arrow-right.png") center no-repeat;
+  position: absolute;
+  width: 22px;
+  height: 41px;
+  cursor: pointer;
+  right: -15px;
+  top: 180px;
 }
 
 .review-block-description-audio {
@@ -5406,6 +5445,7 @@ input:focus {
   font-weight: 400;
   padding: 0;
   border: none;
+  background: none;
 }
 
 .review-block-description-audio-buttons__playButton:after {
@@ -5418,6 +5458,7 @@ input:focus {
 }
 
 .review-block-description-audio-buttons__muteButton {
+  background: none;
   color: #279b9f;
   font-size: 20px;
   font-weight: 400;
@@ -5433,5 +5474,451 @@ input:focus {
 #fullDuration {
   color: #279b9f;
   display: none;
+}
+
+@media (max-width: 1200px) {
+  .reviews-block {
+    max-width: 900px;
+    padding: 65px 75px 60px 60px;
+  }
+  .reviews-block-name {
+    margin-right: 45px;
+  }
+  .reviews-blocks {
+    width: 900px;
+  }
+  .reviews-block-description {
+    top: 55px;
+  }
+  .reviews-arrow_prev {
+    left: -30px;
+  }
+  .reviews-arrow_next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .reviews {
+    padding-top: 75px;
+    padding-bottom: 65px;
+  }
+  .reviews__title {
+    font-size: 25px;
+    margin-bottom: 50px;
+  }
+  .reviews-block {
+    max-width: 690px;
+    padding: 60px 60px 45px 40px;
+  }
+  .reviews-blocks {
+    max-width: 690px;
+  }
+  .reviews-block-name {
+    width: 150px;
+  }
+  .reviews-block-description__text {
+    font-size: 15px;
+    line-height: 26px;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  .reviews-block-name__fi {
+    font-size: 15px;
+  }
+  .reviews-arrow_prev {
+    top: 140px;
+  }
+  .reviews-arrow_next {
+    top: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .reviews-block, .reviews-blocks {
+    width: 510px;
+  }
+  .reviews-block-name {
+    width: 100px;
+  }
+  .reviews-block-description__text, .reviews-block-name__fi, .review-block-description-audio-buttons__playButton:after {
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .reviews-block-description__text {
+    max-width: 285px;
+    margin-bottom: 10px;
+  }
+  .review-block-description-audio__buttons {
+    margin-bottom: 10px;
+  }
+  .review-block-description-audio-buttons__playButton {
+    font-size: 15px;
+  }
+  .review-block-description-audio-buttons__playButton:after {
+    width: 100px;
+    left: 30px;
+    top: 0;
+  }
+  .review-block-description-audio-buttons__muteButton {
+    font-size: 15px;
+  }
+  .reviews-arrow_prev, .reviews-arrow_next {
+    top: 110px;
+  }
+}
+
+@media (max-width: 576px) {
+  .reviews-block {
+    width: 250px;
+    padding: 35px 15px 25px 15px;
+  }
+  .reviews-blocks {
+    width: 250px;
+  }
+  .reviews-block-name {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .reviews-block-name__photo {
+    margin-bottom: 20px;
+  }
+  .reviews-block-description {
+    position: relative;
+    top: 10px;
+  }
+  .review-block-description-audio {
+    margin-bottom: 15px;
+  }
+  .reviews-arrow_prev {
+    top: 145px;
+    left: -7px;
+  }
+  .reviews-arrow_next {
+    top: 145px;
+    right: -7px;
+  }
+}
+
+.waiting {
+  padding-top: 70px;
+  padding-bottom: 72px;
+  background-color: #279b9f;
+  text-align: center;
+}
+
+.waiting__title {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.15em;
+}
+
+@media (max-width: 991px) {
+  .waiting__title {
+    font-size: 25px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.clinic {
+  padding-top: 85px;
+  padding-bottom: 85px;
+}
+
+.clinic__title {
+  font-size: 24px;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 65px;
+}
+
+.clinic-filial {
+  text-align: center;
+}
+
+.clinic-filial__map {
+  max-width: 350px;
+  height: 255px;
+  margin-bottom: 30px;
+  z-index: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clinic-filial-metro__img {
+  margin-right: 21px;
+}
+
+.clinic-filial__metro {
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.clinic-filial__address {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+}
+
+@media (max-width: 1200px) {
+  .clinic-filial {
+    width: 300px;
+  }
+  .clinic-filial__map {
+    width: 300px;
+  }
+}
+
+@media (max-width: 991px) {
+  .clinic {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  .clinic__title {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  .clinic-filial {
+    margin-bottom: 40px;
+  }
+  .clinic-filial:last-child {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .clinic-filial__metro {
+    font-size: 15px;
+  }
+  .clinic-filial__address {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .clinic__title {
+    font-size: 15px;
+  }
+  .clinic-filial__map {
+    margin-bottom: 15px;
+  }
+  .clinic-filial__metro {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+  .clinic-filial-metro__img {
+    width: 15px;
+    margin-right: 10px;
+  }
+  .clinic-filial__address {
+    font-size: 11px;
+  }
+  .clinic-filial_last {
+    margin-bottom: 10px;
+  }
+}
+
+.form4 {
+  padding-top: 80px;
+  padding-bottom: 85px;
+  background: #eef7f7 url("../img/form-4/form-4_bg.png") right no-repeat;
+  background-size: contain;
+}
+
+.form4-data {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.form4__title {
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Roboto Slab';
+  font-weight: 700;
+  line-height: 45px;
+  color: #279b9f;
+  margin-bottom: 70px;
+}
+
+.form4__note {
+  margin-bottom: 25px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.form4-form__input {
+  margin-bottom: 20px;
+}
+
+.form4-form__input_second {
+  margin-bottom: 30px;
+}
+
+.form4-form__button {
+  width: 370px;
+  margin-bottom: 65px;
+}
+
+.form4-tel__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.form4-tel__note {
+  font-family: 'Roboto';
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.form4-tel__num {
+  display: block;
+  font-family: 'Roboto';
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 24px;
+  color: #000000;
+}
+
+@media (max-width: 991px) {
+  .form4 {
+    padding-top: 60px;
+    padding-bottom: 50px;
+    background: #eef7f7;
+  }
+  .form4__title {
+    font-size: 25px;
+    line-height: 36px;
+    margin-bottom: 35px;
+  }
+  .form4-form__button {
+    width: 310px;
+    margin-bottom: 50px;
+  }
+  .form4__note {
+    font-size: 16px;
+  }
+  .form4-tel__note {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .form4-tel__icon {
+    width: 25px;
+  }
+  .form4-tel__num {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .form4__title {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  .form4-form__button, .form4-form__input {
+    width: 290px;
+  }
+  .form4-form__button {
+    margin-bottom: 30px;
+  }
+  .form4__note {
+    font-size: 11px;
+  }
+  .form4-tel__note {
+    font-size: 11px;
+  }
+  .form4-tel__icon {
+    width: 18px;
+  }
+  .form4-tel__num {
+    font-size: 18px;
+  }
+}
+
+.footer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.footer__maden {
+  font-size: 12px;
+  font-family: 'Roboto';
+  margin-bottom: 13px;
+}
+
+.footer__da {
+  margin-bottom: 25px;
+}
+
+.footer__contraindications {
+  margin-left: auto;
+  margin-right: auto;
+  color: #279b9f;
+  display: block;
+  width: 810px;
+  font-size: 36px;
+  font-family: 'Roboto';
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  font-family: 'Roboto';
+}
+
+.fa-heart {
+  color: #ff0000;
+  font-size: 13px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+@media (max-width: 991px) {
+  .footer__contraindications {
+    font-size: 28px;
+    width: 690px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__contraindications {
+    font-size: 25px;
+    width: 510px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer__da {
+    margin-bottom: 10px;
+  }
+  .footer__contraindications {
+    font-size: 15px;
+    width: 295px;
+    margin-bottom: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

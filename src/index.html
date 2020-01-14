@@ -742,9 +742,13 @@
   </section>
   <section class="reviews">
     <div class="container">
-      <h2 class="reviews__title"></h2>
+      <h2 class="reviews__title">Отзывы наших клиентов</h2>
       <!-- /.reviews__title -->
-      <div class="reviews-blocks">
+      <div class="reviews-arrows">
+        <div class="reviews-arrow reviews-arrow_prev"></div>
+        <div class="reviews-arrow reviews-arrow_next"></div>
+      </div>
+      <div class="reviews-blocks reviews-slider">
         <div class="reviews-block">
           <div class="reviews-block-name">
             <div class="reviews-block-name__photo">
@@ -764,8 +768,40 @@
                 <source src="media/Dave Rodgers – Deja Vu.mp3" type="audio/mp3" />
               </audio>
               <div class="review-block-description-audio__buttons" id="buttons">
-                <button type="button" class="review-block-description-audio-buttons__playButton" id="playButton"><i class="fa fa-play"></i></button>
-                <button type="button" class="review-block-description-audio-buttons__muteButton" id="muteButton"><i class="fa fa-volume-up"></i></button>
+                <button type="button" class="review-block-description-audio-buttons__playButton" id="playButton"><i class="fa fa-play" id="playIcon"></i></button>
+                <button type="button" class="review-block-description-audio-buttons__muteButton" id="muteButton"><i class="fa fa-volume-up" id="volumeIcon"></i></button>
+                <span id="currentTime">0:00</span>
+                <span id="fullDuration">0:00</span>
+              </div>
+              <div class="review-block-description-audio__defaultBar" id="defaultBar">
+                <div class="review-block-description-audio__progressBar" id="progressBar"></div>
+              </div>
+            </div>
+          </div>
+          <!-- /.reviews-block-description -->
+        </div>
+        <!-- /.reviews-block -->
+        <div class="reviews-block">
+          <div class="reviews-block-name">
+            <div class="reviews-block-name__photo">
+              <img src="img/reviews/fi.png" alt="fi" class="reviews-block-name-photo__picture">
+            </div>
+            <div class="reviews-block-name__fi">
+              Фамилия Имя
+            </div>
+          </div>
+          <!-- /.reviews-block-name -->
+          <div class="reviews-block-description">
+            <div class="reviews-block-description__text">
+              Эта стоматология очень хорошая, консультация бесплатная, хорошо консультируют, также врачи очень хорошие и добрые, делают всё быстро и качественно сразу видно, что работают профессионалы, также лечат совсем не больно и обращаются с вами очень хорошо.
+            </div>
+            <div class="review-block-description-audio">
+              <audio class="review-block-description-audio__track" id="myTrack">
+                <source src="media/Dave Rodgers – Deja Vu.mp3" type="audio/mp3" />
+              </audio>
+              <div class="review-block-description-audio__buttons" id="buttons">
+                <button type="button" class="review-block-description-audio-buttons__playButton" id="playButton"><i class="fa fa-play" id="playIcon"></i></button>
+                <button type="button" class="review-block-description-audio-buttons__muteButton" id="muteButton"><i class="fa fa-volume-up" id="volumeIcon"></i></button>
                 <span id="currentTime">0:00</span>
                 <span id="fullDuration">0:00</span>
               </div>
@@ -782,6 +818,118 @@
     <!-- /.container -->
   </section>
   <!-- /.reviews -->
+  <div class="waiting">
+    <div class="container">
+      <h2 class="waiting__title">Мы ждём вас ежедневно с 09:00 до 21:00</h2>
+    </div>
+  </div>
+  <section class="clinic">
+    <div class="container">
+      <h3 class="clinic__title">Выберите ближайшую клинику:</h3>
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="clinic-filial">
+            <div class="clinic-filial__map" id="map1">
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acab7146d52ebf12a4a9dcbdd01bd93ec9b39bd82f9cd38b8b67eec4ac879fa74&amp;width=370&amp;height=255&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <!-- /.clinic-filial__map -->
+            <div class="clinic-filial__metro">
+              <img src="img/clinic/metro.png" alt="Метро" class="clinic-filial-metro__img">
+              Академическая
+            </div>
+            <!-- /.clinic-filial__metro -->
+            <div class="clinic-filial__address">
+              Гражданский проспект дом 88, кор. 3
+            </div>
+            <!-- /.clinic-filial__address -->
+          </div>
+          <!-- /.clinic-filial -->
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="clinic-filial">
+            <div class="clinic-filial__map" id="map2">
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A207a269da18b33a204bb459c0b3e3cab7bdab69e031064eb1a2443a3ef75bd81&amp;width=370&amp;height=255&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <!-- /.clinic-filial__map -->
+            <div class="clinic-filial__metro">
+              <img src="img/clinic/metro.png" alt="Метро" class="clinic-filial-metro__img">
+              Выборгская
+            </div>
+            <!-- /.clinic-filial__metro -->
+            <div class="clinic-filial__address">
+              Пр. Испытателей, дом 13
+            </div>
+            <!-- /.clinic-filial__address -->
+          </div>
+          <!-- /.clinic-filial -->
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="clinic-filial clinic-filial_last">
+            <div class="clinic-filial__map" id="map3">
+              <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A78c5b3b75d1063cb060fa3d6835f1229a9a5e5a150ba360b45d3a6567026dca2&amp;width=370&amp;height=255&amp;lang=ru_RU&amp;scroll=true"></script>
+            </div>
+            <!-- /.clinic-filial__map -->
+            <div class="clinic-filial__metro">
+              <img src="img/clinic/metro.png" alt="Метро" class="clinic-filial-metro__img">
+              Пионерская
+            </div>
+            <!-- /.clinic-filial__metro -->
+            <div class="clinic-filial__address">
+              Большой Сампсониевский пр., дом 47
+            </div>
+            <!-- /.clinic-filial__address -->
+          </div>
+          <!-- /.clinic-filial -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="form4">
+    <div class="container">
+      <div class="row">
+        <div class="form4-data">
+          <h2 class="form4__title">Остались вопросы?<br>Мы ждём вас на бесплатной консультации</h2>
+          <div class="form4__note">Для этого заполните форму ниже</div>
+          <form action="#" class="form4-form">
+            <input type="text" class="form4-form__input input" placeholder="Ваше имя">
+            <input type="tel" class="form4-form__input form4-form__input_second input" placeholder="Ваш телефон">
+            <button class="button form4-form__button">Получить консультацию</button>
+          </form>
+          <div class="form4-tel">
+            <div class="form4-tel__note">Или перезвоните нам по телефону:</div>
+            <div class="form4-tel__link">
+              <img src="img/form-3/phone-icon.png" alt="icon" class="form4-tel__icon">
+              <a href="tel:+70000000000" class="form4-tel__num">+7 (0000) 00-00-00</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="footer__maden">
+            Cделано с <i class="fa fa-heart"></i> командой
+          </div>
+          <!-- /.footer__maden -->
+          <div class="footer__da">
+            <img src="img/footer/da.png" alt="Да!">
+          </div>
+          <!-- /.footer__da -->
+          <span class="footer__contraindications">Имеются противопоказания, необходимо проконсультироваться со специалистом</span>
+          <!-- /.footer__contraindications -->
+          <div class="footer__copyright">© 2017. стоматология Уни Дент</div>
+          <!-- /.footer__copyright -->
+        </div>
+        <!-- /.col-12 -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </footer>
+  <!-- /.footer -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/main.js"></script>

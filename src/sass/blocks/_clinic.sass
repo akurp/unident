@@ -1,0 +1,65 @@
+.clinic
+  padding-top: 85px
+  padding-bottom: 85px
+  &__title
+    font-size: 24px
+    font-family: 'Roboto Slab'
+    font-weight: 700
+    text-align: center
+    margin-bottom: 65px
+  &-filial
+    text-align: center
+    &__map
+      max-width: 350px
+      height: 255px
+      margin-bottom: 30px
+      z-index: 4
+      display: flex
+    &-metro__img
+      margin-right: 21px
+    &__metro
+      font-family: 'Roboto Slab'
+      font-weight: 700
+      font-size: 16px
+      margin-bottom: 30px
+    &__address
+      font-family: 'Roboto'
+      font-weight: 400
+      font-size: 16px
+@media (max-width: 1200px)
+  .clinic-filial
+    width: 300px
+  .clinic-filial__map
+    width: 300px
+@media (max-width: 991px)
+  .clinic
+    padding-top: 60px
+    padding-bottom: 40px
+  .clinic__title
+    font-size: 18px
+    margin-bottom: 40px
+  .clinic-filial
+    margin-bottom: 40px
+    &:last-child
+      margin-left: auto
+      margin-right: auto
+  .clinic-filial__metro
+    font-size: 15px
+  .clinic-filial__address
+    font-size: 15px
+@media (max-width: 768px)
+  .clinic__title
+    font-size: 15px
+  .clinic-filial__map
+    margin-bottom: 15px
+  .clinic-filial__metro
+    font-size: 11px
+    margin-bottom: 10px
+  .clinic-filial-metro__img
+    width: 15px
+    margin-right: 10px
+  .clinic-filial__address
+    font-size: 11px
+  .clinic-filial
+    &_last
+      margin-bottom: 10px
