@@ -129,7 +129,7 @@
 
             </div>
             <!-- /.main-text__slider -->
-            <button class="button main-text__button">Записаться на осмотр</button><!-- /.button main-text__button -->
+            <button class="button main-text__button" id="button">Записаться на осмотр</button><!-- /.button main-text__button -->
             <button class="button-o main-text__button-o">Посмотреть видео</button> <!-- /.button-o main-text__button-o -->
           </div>
           <!-- /.main-text -->
@@ -304,8 +304,8 @@
         <!-- /.col-lg-6 -->
         <div class="col-lg-4 col-md-6 col-12">
           <form action="#" class="form1-data">
-            <input type="text" class="input form1-data__input" placeholder="Ваше имя">
-            <input type="tel" class="input form1-data__input" placeholder="Ваш номер">
+            <input type="text" name="formUser1" class="input form1-data__input" placeholder="Ваше имя">
+            <input type="tel" name="formPhone1" id="phone1" class="input form1-data__input" placeholder="Ваш номер">
             <button class="button form1-data__button">Записаться на осмотр</button>
             <!-- /.button form-data__button -->
           </form>
@@ -386,10 +386,10 @@
       </h2>
       <div class="row">
         <div class="col-lg-8">
-          <div class="form2-form">
-            <input type="tel" class="input form2-form__input" placeholder="Ваш телефон">
+          <form class="form2-form">
+            <input type="tel" name="formPhone2" id="phone2" class="input form2-form__input" placeholder="Ваш телефон">
             <button class="button form2-form__button">Записаться на консультацию</button></div>
-          </div>
+          </form>
           <div class="col-lg-4">
             <div class="form-img__wrap">
               <div class="form2-img">
@@ -535,10 +535,12 @@
             <div class="form3-data__note">Для этого заполните форму ниже:</div>
             <!-- /.form3-data__note -->
             <form action="#" class="form3-data-form">
-              <input type="text" class="input form3-data-form__input" placeholder="Ваше имя">
-              <input type="tel" class="input form3-data-form__input" placeholder="Ваш телефон">
+              <input type="text" name="formUser3" class="input form3-data-form__input" placeholder="Ваше имя">
+              <input type="tel" name="formPhone3" id="phone3" class="input form3-data-form__input" placeholder="Ваш телефон">
               <button class="button form3-data-form__button">Записаться на осмотр</button>
               <!-- /.button form3-data-form__button -->
+            </form>
+            <!-- /.form3-data-form -->
               <div class="form3-data-form-tel">
                 <div class="form3-data-form-tel__note">Или перезвоните нам по телефону:</div>
                 <!-- /.form3-data-form-tel__note -->
@@ -548,8 +550,6 @@
                 </div>
               </div>
               <!-- /.form3-data-form-tel -->
-            </div>
-            <!-- /.form3-data-form -->
           </div>
           <!-- /.form3-data -->
         </div>
@@ -891,8 +891,8 @@
           <h2 class="form4__title">Остались вопросы?<br>Мы ждём вас на бесплатной консультации</h2>
           <div class="form4__note">Для этого заполните форму ниже</div>
           <form action="#" class="form4-form">
-            <input type="text" class="form4-form__input input" placeholder="Ваше имя">
-            <input type="tel" class="form4-form__input form4-form__input_second input" placeholder="Ваш телефон">
+            <input type="text" name="formUser4" class="form4-form__input input" placeholder="Ваше имя">
+            <input type="tel" name="formPhone4" id="phone4" class="form4-form__input form4-form__input_second input" placeholder="Ваш телефон">
             <button class="button form4-form__button">Получить консультацию</button>
           </form>
           <div class="form4-tel">
@@ -930,8 +930,36 @@
     <!-- /.container -->
   </footer>
   <!-- /.footer -->
+  <div class="modal" id="modal">
+    <div class="modal-dialog">
+      <button class="modal-dialog__close" id="close">&times</button>
+      <h2 class="modal-dialog__title">Заказать обратный звонок</h2>
+      <div class="modal-content">
+        <form action="#" class="modal-form" id="form-4">
+          <input type="text" name="formUserM" class="modal-form__input input" placeholder="Ваше имя">
+          <input type="tel" name="formPhoneM" id="phone5" class="modal-form__input modal__input_second input" placeholder="Ваш телефон">
+          <button class="button modal-form__button">Получить консультацию</button>
+        </form>
+        <div class="modal-tel">
+          <div class="modal-tel__note">Или перезвоните нам по телефону:</div>
+          <div class="modal-tel__link">
+            <img src="img/form-3/phone-icon.png" alt="icon" class="modal-tel__icon">
+            <a href="tel:+70000000000" class="modal-tel__num">+7 (0000) 00-00-00</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-success">
+      <button class="modal-dialog__close" id="close">&times</button>
+      <h2 class="modal-dialog__title">Спасибо за заявку!</h2>
+      <div class="modal-tel__note">Мы свяжемся с вами в ближайшее время.</div>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.4.1.slim.js"></script>
   <script src="js/slick.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/jquery.validate.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 </html>

@@ -52,17 +52,77 @@ $(document).ready(function () {
     $('.reviews-slider').slick(
         {slidesToShow: 1, slidesToScroll: 1, arrows: true, prevArrow: $('.reviews-arrow_prev'), nextArrow: $('.reviews-arrow_next')}
     );
-
-    var e = $(".reviews")
-        .offset()
-        .top;
-    $(window).bind("scroll", function () {
-        $(this).scrollTop() > e && (
-            console.log("вот тут-то ты и попался, дружок-пирожок!"),
-            // $('#map1').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acab7146d52ebf12a4a9dcbdd01bd93ec9b39bd82f9cd38b8b67eec4ac879fa74&amp;width=370&amp;height=255&amp;lang=ru_RU&amp;scroll=true"></script>'),
-            $(window).unbind("scroll")
-        )
+    // modals
+    var button = $('#button');
+    var modal = $('#modal');
+    var close  = $('#close');
+    button.on('click', function()
+    {
+        modal.addClass('modal_active');
     })
+    close.on('click', function()
+    {
+        modal.removeClass('modal_active')
+    });
+    
+
+
+    $('form').each(function(){
+        $(this).validate({
+            rules:
+            {
+                formUser1:
+                {
+                    required: true
+                },
+                formPhone1:
+                {
+                    required: true
+                },
+                formUser2:
+                {
+                    required: true
+                },
+                formPhone2:
+                {
+                    required: true
+                },
+                formUser3:
+                {
+                    required: true
+                },
+                formPhone3:
+                {
+                    required: true
+                },
+                formUser4:
+                {
+                    required: true
+                },
+                formPhone4:
+                {
+                    required: true
+                },
+                formUserM:
+                {
+                    required: true
+                },
+                formPhoneM:
+                {
+                    required: true
+                }
+            },
+            errorClass: "invalid",
+            errorElement: "label",
+            errorPlacement: function(invalid, label){}
+        })
+    })
+    // phone mask
+    $('#phone1').mask("+7 (999) 999-99-99");
+    $('#phone2').mask("+7 (999) 999-99-99");
+    $('#phone3').mask("+7 (999) 999-99-99");
+    $('#phone4').mask("+7 (999) 999-99-99");
+    $('#phone5').mask("+7 (999) 999-99-99");
 });
 // creating own audioplayer
 var myTrack = document.getElementById('myTrack');
