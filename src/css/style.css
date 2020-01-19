@@ -1,4 +1,43 @@
-@charset "UTF-8";
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url("../fonts/RobotoSlab-Bold.eot");
+  src: local("Roboto Slab Bold"), local("RobotoSlab-Bold"), url("../fonts/RobotoSlab-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoSlab-Bold.woff") format("woff"), url("../fonts/RobotoSlab-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  src: url("../fonts/RobotoSlab-Regular.eot");
+  src: local("Roboto Slab Regular"), local("RobotoSlab-Regular"), url("../fonts/RobotoSlab-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/RobotoSlab-Regular.woff") format("woff"), url("../fonts/RobotoSlab-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Bold.eot");
+  src: local("Roboto Bold"), local("Roboto-Bold"), url("../fonts/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Regular.eot");
+  src: local("Roboto"), local("Roboto-Regular"), url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url("../fonts/Roboto-Light.eot");
+  src: local("Roboto Light"), local("Roboto-Light"), url("../fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Light.woff") format("woff"), url("../fonts/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -5422,18 +5461,19 @@ label.invalid {
   max-width: 520px;
 }
 
-.review-block-description-audio__defaultBar {
+.review-block-description-audio__defaultBar, .review-block-description-audio .audioplayer-bar, .review-block-description-audio .audioplayer-bar-loaded {
   max-width: 520px;
   position: relative;
   background: #e0eff7;
   height: 5px;
 }
 
-.review-block-description-audio__progressBar {
+.review-block-description-audio__progressBar, .review-block-description-audio .audioplayer-bar-played {
   position: absolute;
   height: 5px;
   background: #279b9f;
   width: 0px;
+  top: 0;
 }
 
 .review-block-description-audio__buttons {
@@ -5450,7 +5490,7 @@ label.invalid {
 .review-block-description-audio-buttons__playButton {
   position: relative;
   color: #279b9f;
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Roboto';
   font-weight: 400;
   padding: 0;
@@ -5460,7 +5500,7 @@ label.invalid {
 
 .review-block-description-audio-buttons__playButton:after {
   position: absolute;
-  content: "Прослушать отзыв";
+  content: "";
   top: 5px;
   left: 40px;
   font-size: 16px;
@@ -5476,14 +5516,23 @@ label.invalid {
   padding: 0;
 }
 
-#currentTime {
+.currentTime, .audioplayer-time, .audioplayer-time-current {
   color: #279b9f;
   display: none;
 }
 
-#fullDuration {
+.fullDuration, .audioplayer-time, .audioplayer-time-duration {
   color: #279b9f;
   display: none;
+}
+
+.fa-play, .fa-pause {
+  margin-right: 40px;
+  font-size: 20px;
+}
+
+.fa-volume-up {
+  font-size: 20px;
 }
 
 @media (max-width: 1200px) {
@@ -5542,6 +5591,10 @@ label.invalid {
   .reviews-arrow_next {
     top: 140px;
   }
+  .fa-play, .fa-pause {
+    margin-right: 20px;
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -5575,6 +5628,13 @@ label.invalid {
   }
   .reviews-arrow_prev, .reviews-arrow_next {
     top: 110px;
+  }
+  .fa-play, .fa-pause {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  .fa-volume-up {
+    font-size: 15px;
   }
 }
 
@@ -5967,10 +6027,6 @@ label.invalid {
   display: none;
 }
 
-.modal-success_active {
-  display: block;
-}
-
 .modal-dialog {
   position: relative;
   margin: auto;
@@ -6094,6 +6150,40 @@ label.invalid {
   }
   .modal-tel__num {
     font-size: 18px;
+  }
+}
+
+.success {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.success_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.success-dialog {
+  margin: auto;
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  width: 900px;
+  min-width: 290px;
+  background-color: white;
+  padding: 40px;
+}
+
+@media (max-width: 991px) {
+  .success-dialog {
+    padding: 40px 20px;
+    max-width: 390px;
   }
 }
 /*# sourceMappingURL=style.css.map */
